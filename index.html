@@ -12,7 +12,7 @@
   <link href="assets/img/logo-kkn.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-   <!-- LineIcons CSS (penting untuk icon seperti lni-user) -->
+   <!-- LineIcons CSS -->
   <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
 
   <!-- Fonts -->
@@ -45,20 +45,16 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero" class="active">Beranda</a></li>
-          <li class="dropdown"><a href="#about"><span>Petani Kami</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li class="dropdown"><a href="#about"><span>Tentang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="#about">Kisah Petani</a></li>
-              <li><a href="#why-choose-us">Sejarah Kopi</a></li>
-              <li><a href="#work-process">Proses Pengolahan</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <li><a href="#about">Profil Desa</a></li>
+              <li class="dropdown"><a href="#why-choose-us"><span>Sejarah Kopi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
+                  <li><a href="#">Tradisi Budaya</a></li>
+                  <li><a href="#">Istilah Lokal</a></li>
                 </ul>
-              </li> -->
+              </li>
+              <li><a href="#work-process">Proses Pengolahan</a></li>
             </ul>
           </li>
           <li class="dropdown"><a href="#services"><span>Katalog Produk</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
@@ -67,10 +63,9 @@
               <li><a href="#team">Inovasi Produk</a></li>
             </ul>
           </li>
+          <li><a href="#testimonials">Kisah Petani</a></li>
           <li><a href="#pricing">Blog</a></li>
-          <!-- <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#team">Team</a></li> -->
-          <li><a href="#contact">Tentang Kami</a></li>
+          <li><a href="#contact">Profil Tim</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -92,7 +87,7 @@
               <p>Desa Lanjan tidak sekedar menyimpan aroma kopi yang berbeda, melainkan kisah perjuangan petani, tradisi yang diwariskan, dan cita rasa yang terus dijaga. </p>
               <!-- <p>Selamat datang di laman resmi Kopi Lanjan, tempat kami merayakan kerja keras petani lokal melalui desain, cerita, dan rasa.</p> -->
               <div class="hero-btns">
-                <a href="#about" class="btn btn-primary">Cerita Unik Kami</a>
+                <a href="#testimonials" class="btn btn-primary">Cerita Unik Kami</a>
                 <a href="#services" class="btn btn-outline">Lihat Produk</a>
               </div>
               <!-- <div class="hero-stats">
@@ -125,24 +120,46 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Tentang</h2>
+        <div><span>Tentang</span> <span class="description-title">Desa Lanjan</span></div>
+      </div>
+      <!-- End Section Title -->
+
         <div class="row align-items-center">
-          <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="200">
+          <div class="col-lg-5 md-3" data-aos="zoom-out" data-aos-delay="200">
             <div class="about-image">
-              <img src="assets/img/about/about-square-12.webp" alt="About Our Consulting Firm" class="img-fluid main-image">
-              <div class="experience-badge">
-                <span class="years">15+</span>
-                <span class="text">Years of Experience</span>
+              <div class="maps-container">
+                <h3>Peta Lokasi</h3>
+                <div class="maps-wrapper">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15832.24002682246!2d110.30595229818243!3d-7.233996334353808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e707e0fcdb9d809%3A0xb9273e0ec909f071!2sLanjan%2C%20Kec.%20Sumowono%2C%20Kabupaten%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1752935170327!5m2!1sid!2sid"                    
+                    width="100%" 
+                    height="400" 
+                    style="border:0; border-radius: 15px;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                  </iframe>
+                </div>
+                <div class="experience-badge">
+                  <a href="https://g.co/kgs/aA7QxGJ" target="_blank" class="open-maps-link">
+                    <i class="lni lni-location-arrow-right"></i>
+                    <span class="text">Buka di Google Maps</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="about-content">
-              <h2>We Help Businesses Reach Their Full Potential</h2>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+              <h2>Desa Lanjan dikenal akan kesuburan tanahnya untuk pertumbuhan kopi berkualitas.</h2>
+              <p class="lead">Dengan tujuh dusun yang tersebar luas, kopi yang dihasilkan di desa ini bukan hanya tentang hasil panen, tetapi juga tentang cerita dan budaya yang mengakar dalam kehidupan petani.</p>
+              <p>Melalui keahlian dan tradisi yang diwariskan, kopi Lanjan mencerminkan kekayaan budaya lokal, menjadikannya lebih dari sekadar komoditas, ia adalah manifestasi dari filosofi dan nilai-nilai budaya yang telah menyatu dalam kehidupan masyarakat.</p>
 
-              <div class="row features-row">
+             <!--  <div class="row features-row">
                 <div class="col-md-6">
                   <div class="feature-item">
                     <div class="icon">
@@ -181,12 +198,9 @@
                     <h4>Proven Results</h4>
                     <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
                   </div>
-                </div>
-              </div>
+                </div> 
+              </div> -->
 
-              <div class="cta-button">
-                <a href="#about" class="btn btn-primary">Learn More About Us</a>
-              </div>
             </div>
           </div>
         </div>
@@ -197,22 +211,23 @@
 
     
     <!-- Why Choose Us Section -->
-    <section id="why-choose-us" class="why-choose-us section">
+    <section id="why-choose-us" class="why-choose-us section light-background">
       
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Sejarah Kopi</h2>
         <div><span>Sejarah Kopi</span> <span class="description-title">Desa Lanjan</span></div>
-      </div><!-- End Section Title -->
+      </div>
+      <!-- End Section Title -->
       
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         
         <div class="row align-items-center">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="features-content">
-              <h2>Why Choose Our Consulting Services</h2>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.</p>
+              <h2>Mayoritas kopi di Desa Lanjan adalah jenis robusta</h2>
+              <p class="lead">Kopi arabika tetap dibudidayakan meski tidak sebanyak robusta. Robusta Lanjan dikenal dengan biji yang besar, rasa yang kuat, dan cita rasa manis yang khas.</p>
+              <p>Bapak Mukhlis, petani kopi dari Dusun Susukan, salah satu dari tujuh dusun di Desa Lanjan, menyebutkan, “Rasa kopi dari sini memang ada manisnya tersendiri, sulit ditemukan di tempat lain.”</p>
               
               <div class="features-list">
                 <div class="feature-item">
@@ -278,7 +293,7 @@
                   <p>Countries Served</p>
                 </div>
               </div>
-              <img src="assets/img/misc/misc-square-11.webp" alt="" class="img-fluid main-image">
+              <img src="assets/img/about/thumbnail-kopi.webp" alt="" class="img-fluid main-image">
               <div class="experience-badge">
                 <div class="badge-content">
                   <span class="number">15+</span>
@@ -307,7 +322,7 @@
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="steps-content">
-              <h2>Our Proven Consulting Process</h2>
+              <h2>Lorem Ipsum Dolor Sit Amet</h2>
               <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
 
@@ -323,31 +338,47 @@
               <div class="step-item">
                 <div class="step-number">01</div>
                 <div class="step-content">
-                  <h3>Discovery &amp; Analysis</h3>
+                  <h3>Persiapan Awal</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                 </div>
               </div>
+
+              <!-- <div class="step-item">
+                <div class="step-number">02</div>
+                <div class="step-content">
+                  <h3>Rorak</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </div> -->
 
               <div class="step-item">
                 <div class="step-number">02</div>
                 <div class="step-content">
-                  <h3>Strategy Development</h3>
+                  <h3>Pemupukan</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                 </div>
               </div>
+
+              <!-- <div class="step-item">
+                <div class="step-number">04</div>
+                <div class="step-content">
+                  <h3>Nyambung</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </div> -->
 
               <div class="step-item">
                 <div class="step-number">03</div>
                 <div class="step-content">
-                  <h3>Implementation</h3>
+                  <h3>Ngrempel</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                 </div>
               </div>
 
-              <div class="step-item">
+                <div class="step-item">
                 <div class="step-number">04</div>
                 <div class="step-content">
-                  <h3>Monitoring &amp; Optimization</h3>
+                  <h3>Ngrempel</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                 </div>
               </div>
@@ -355,7 +386,23 @@
               <div class="step-item">
                 <div class="step-number">05</div>
                 <div class="step-content">
-                  <h3>Evaluation &amp; Reporting</h3>
+                  <h3>Babat</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">06</div>
+                <div class="step-content">
+                  <h3>Panen Petik Merah</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                </div>
+              </div>
+
+              <div class="step-item">
+                <div class="step-number">07</div>
+                <div class="step-content">
+                  <h3>Pengeringan</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                 </div>
               </div>
@@ -382,10 +429,10 @@
           <div class="col-lg-3 col-md-5" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card">
               <img src="assets/img/produk/lanjava.jpg" class="img-fluid mb-3 rounded product-image" alt="" loading="lazy">
-              <h3>Kopi Basah Pak Muji</h3>
+              <h3>Green Beans Pak Muji</h3>
               <p>Lorem ipsum dolor sit amet</p>
               <h4>Rp 10.000/kg</h4>
-              <a href="https://wa.me/" target="_blank" class="wa-button mt-2">
+              <a href="https://wa.me/6285869347191" target="_blank" class="wa-button mt-2">
                 <i class="lni lni-whatsapp"></i> Pesan via Whatsapp
               </a>
             </div>
@@ -394,19 +441,7 @@
           <div class="col-lg-3 col-md-5" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card">
               <img src="assets/img/produk/lanjava.jpg" class="img-fluid mb-3 rounded product-image" alt="" loading="lazy">
-              <h3>Kopi Basah Pak Muji</h3>
-              <p>Lorem ipsum dolor sit amet</p>
-              <h4 style="color: #A67B5B;">Rp 10.000/kg</h4>
-              <a href="https://wa.me/" target="_blank" class="wa-button mt-2">
-                <i class="lni lni-whatsapp"></i> Pesan via Whatsapp
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card">
-              <img src="assets/img/produk/lanjava.jpg" class="img-fluid mb-3 rounded product-image" alt="" loading="lazy">
-              <h3>Kopi Basah Pak Muji</h3>
+              <h3>Green Beans Pak Muji</h3>
               <p>Lorem ipsum dolor sit amet</p>
               <h4 style="color: #A67B5B;">Rp 10.000/kg</h4>
               <a href="https://wa.me/" target="_blank" class="wa-button mt-2">
@@ -418,7 +453,7 @@
           <div class="col-lg-3 col-md-5" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card">
               <img src="assets/img/produk/lanjava.jpg" class="img-fluid mb-3 rounded product-image" alt="" loading="lazy">
-              <h3>Kopi Basah Pak Muji</h3>
+              <h3>Green Beans Pak Muji</h3>
               <p>Lorem ipsum dolor sit amet</p>
               <h4 style="color: #A67B5B;">Rp 10.000/kg</h4>
               <a href="https://wa.me/" target="_blank" class="wa-button mt-2">
@@ -430,7 +465,7 @@
           <div class="col-lg-3 col-md-5" data-aos="fade-up" data-aos-delay="200">
             <div class="service-card">
               <img src="assets/img/produk/lanjava.jpg" class="img-fluid mb-3 rounded product-image" alt="" loading="lazy">
-              <h3>Kopi Basah Pak Muji</h3>
+              <h3>Green Beans Pak Muji</h3>
               <p>Lorem ipsum dolor sit amet</p>
               <h4 style="color: #A67B5B;">Rp 10.000/kg</h4>
               <a href="https://wa.me/" target="_blank" class="wa-button mt-2">
@@ -438,47 +473,7 @@
               </a>
             </div>
           </div>
-
-          <div class="col-lg-3 col-md-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card">
-              <img src="assets/img/produk/lanjava.jpg" class="img-fluid mb-3 rounded product-image" alt="" loading="lazy">
-              <h3>Kopi Basah Pak Muji</h3>
-              <p>Lorem ipsum dolor sit amet</p>
-              <h4 style="color: #A67B5B;">Rp 10.000/kg</h4>
-              <a href="https://wa.me/" target="_blank" class="wa-button mt-2">
-                <i class="lni lni-whatsapp"></i> Pesan via Whatsapp
-              </a>
-            </div>
-          </div>
-
-                    <div class="col-lg-3 col-md-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card">
-              <img src="assets/img/produk/lanjava.jpg" class="img-fluid mb-3 rounded product-image" alt="" loading="lazy">
-              <h3>Kopi Basah Pak Muji</h3>
-              <p>Lorem ipsum dolor sit amet</p>
-              <h4 style="color: #A67B5B;">Rp 10.000/kg</h4>
-              <a href="https://wa.me/" target="_blank" class="wa-button mt-2">
-                <i class="lni lni-whatsapp"></i> Pesan via Whatsapp
-              </a>
-            </div>
-          </div>
-
-                    <div class="col-lg-3 col-md-5" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-card">
-              <img src="assets/img/produk/lanjava.jpg" class="img-fluid mb-3 rounded product-image" alt="" loading="lazy">
-              <h3>Kopi Basah Pak Muji</h3>
-              <p>Lorem ipsum dolor sit amet</p>
-              <h4 style="color: #A67B5B;">Rp 10.000/kg</h4>
-              <a href="https://wa.me/" target="_blank" class="wa-button mt-2">
-                <i class="lni lni-whatsapp"></i> Pesan via Whatsapp
-              </a>
-            </div>
-          </div>
-
-          <!-- <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="800">
-          <a href="#contact" class="btn btn-primary">Request a Consultation</a> -->
         </div>
-
       </div>
 
     </section><!-- /Services Section -->
@@ -647,79 +642,17 @@
 
     </section><!-- /Team Section -->
 
-
-    <!-- Blog Section -->
-    <section id="pricing" class="pricing section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Blog</h2>
-        <div><span>Artikel</span> <span class="description-title">Seputar Kopi</span></div>
-      </div><!-- End Section Title -->
-
-      <div class="row gy-4 px-5">
-        <!-- Artikel 1 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="pricing-item h-100 d-flex flex-column justify-content-between shadow-sm rounded">
-            <div class="pricing-header">
-              <img src="assets/img/petani-kopi.webp" alt="Gambar Artikel Adira" class="img-fluid mb-3 rounded">
-              <h3 class="fw-semibold" style="color:#A67B5B">Judul Artikel Adira</h3>
-              <p class="mb-3">Mengulas sejarah dan perjalanan petani kopi di desa Lanjan dengan pendekatan storytelling yang membumi.</p>
-              <a href="artikel1.html" class="read-more"> Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
-            </div>
-            <div class="pricing-footer d-flex justify-content-between align-items-center px-4 pb-3">
-              <span class="name d-flex align-items-center text-secondary"><i class="lni lni-user me-1"></i> Adira</span>
-              <span class="date d-flex align-items-center text-secondary"><i class="lni lni-calendar me-1"></i> 15 Juli, 2025</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Artikel 2 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="pricing-item h-100 d-flex flex-column justify-content-between shadow-sm rounded">
-            <div class="pricing-header">
-              <img src="assets/img/petani-kopi.webp" alt="Gambar Artikel Adira" class="img-fluid mb-3 rounded">
-              <h3 class="fw-semibold" style="color:#A67B5B">Judul Artikel Dinda</h3>
-              <p class="mb-3">Mengulas sejarah dan perjalanan petani kopi di desa Lanjan dengan pendekatan storytelling yang membumi.</p>
-              <a href="artikel1.html" class="read-more"> Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
-            </div>
-            <div class="pricing-footer d-flex justify-content-between align-items-center px-4 pb-3">
-              <span class="name d-flex align-items-center text-secondary"><i class="lni lni-user me-1"></i>Dinda</span>
-              <span class="date d-flex align-items-center text-secondary"><i class="lni lni-calendar me-1"></i> 15 Juli, 2025</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Artikel 3 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="pricing-item h-100 d-flex flex-column justify-content-between shadow-sm rounded">
-            <div class="pricing-header">
-              <img src="assets/img/petani-kopi.webp" alt="Gambar Artikel Adira" class="img-fluid mb-3 rounded">
-              <h3 class="fw-semibold" style="color:#A67B5B">Judul Artikel Naarah</h3>
-              <p class="mb-3">Mengulas sejarah dan perjalanan petani kopi di desa Lanjan dengan pendekatan storytelling yang membumi.</p>
-              <a href="artikel1.html" class="read-more"> Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
-            </div>
-            <div class="pricing-footer d-flex justify-content-between align-items-center px-4 pb-3">
-              <span class="name d-flex align-items-center text-secondary"><i class="lni lni-user me-1"></i>Naarah</span>
-              <span class="date d-flex align-items-center text-secondary"><i class="lni lni-calendar me-1"></i> 15 Juli, 2025</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- Blog Section End -->
-
     <!-- Consultation Section -->
-    <section id="consultation" class="consultation section light-background">
+    <!-- <section id="consultation" class="consultation section light-background"> -->
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <!-- <div class="container section-title" data-aos="fade-up">
         <h2>Consultation Form</h2>
         <div><span>Schedule a&nbsp;</span> <span class="description-title">Consultation Form</span></div>
-      </div><!-- End Section Title -->
+      </div> -->
+      <!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="cta-wrapper">
           <div class="row align-items-center">
             <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
@@ -780,7 +713,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- /End Consultation Section -->
      
     <!-- Testimonials Section -->
@@ -788,30 +721,24 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <div><span>Check Our</span> <span class="description-title">Testimonials</span></div>
+        <h2>Kisah Petani</h2>
+        <div><span>Kisah Unik</span> <span class="description-title">Petani Desa Lanjan</span></div>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row g-4">
-          <!-- Testimonial Item 1 -->
+          <!-- Kisah Petani 1 -->
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce posuere metus vitae arcu imperdiet, id aliquet ante scelerisque. Sed sit amet sem vitae urna fringilla tempus.</p>
+            <h4>Cerita dari Ladang Pak Sujadi: Kala Kopi Menjadi Bagian dari Kehidupan</h4>
+              <p>Namanya Pak Sujadi, petani kopi dari Dusun Jambon yang sudah akrab dengan kopi sejak usianya masih belia. Kopi selayaknya teman ‘tuk bertumbuh dan belajar. Ketertarikan terhadap kopi juga tlah lama tumbuh.</p>
               <div class="testimonial-footer">
                 <div class="testimonial-author">
-                  <img src="assets/img/person/person-m-3.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <img src="assets/img/petani/cth-pak-sujadi.jpeg" alt="Author" class="img-fluid rounded-circle" loading="lazy">
                   <div>
-                    <h5>Michael Anderson</h5>
-                    <span>Software Developer</span>
+                    <h5>Pak Sujadi</h5>
+                    <span>Petani Kopi Dusun Jambon</span>
                   </div>
                 </div>
                 <div class="quote-icon">
@@ -819,25 +746,20 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Testimonial Item -->
+          </div>
+          <!-- End Kisah Petani -->
 
-          <!-- Testimonial Item 2 -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+          <!-- Kisah Petani 2 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <h4>Cerita dari Ladang Pak Sujadi: Kala Kopi Menjadi Bagian dari Kehidupan</h4>
+              <p>Namanya Pak Sujadi, petani kopi dari Dusun Jambon yang sudah akrab dengan kopi sejak usianya masih belia. Kopi selayaknya teman ‘tuk bertumbuh dan belajar. Ketertarikan terhadap kopi juga tlah lama tumbuh.</p>
               <div class="testimonial-footer">
                 <div class="testimonial-author">
-                  <img src="assets/img/person/person-f-5.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <img src="assets/img/petani/cth-pak-sujadi.jpeg" alt="Author" class="img-fluid rounded-circle" loading="lazy">
                   <div>
-                    <h5>Sophia Martinez</h5>
-                    <span>Marketing Specialist</span>
+                    <h5>Petani 2</h5>
+                    <span>Petani Kopi Dusun Jambon</span>
                   </div>
                 </div>
                 <div class="quote-icon">
@@ -845,25 +767,20 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Testimonial Item -->
+          </div>
+          <!-- End Kisah Petani -->
 
-          <!-- Testimonial Item 3 -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+          <!-- Kisah Petani 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum.</p>
+            <h4>Cerita dari Ladang Pak Sujadi: Kala Kopi Menjadi Bagian dari Kehidupan</h4>
+              <p>Namanya Pak Sujadi, petani kopi dari Dusun Jambon yang sudah akrab dengan kopi sejak usianya masih belia. Kopi selayaknya teman ‘tuk bertumbuh dan belajar. Ketertarikan terhadap kopi juga tlah lama tumbuh.</p>
               <div class="testimonial-footer">
                 <div class="testimonial-author">
-                  <img src="assets/img/person/person-m-7.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <img src="assets/img/petani/cth-pak-sujadi.jpeg" alt="Author" class="img-fluid rounded-circle" loading="lazy">
                   <div>
-                    <h5>David Wilson</h5>
-                    <span>Graphic Designer</span>
+                    <h5>Petani 3</h5>
+                    <span>Petani Kopi Dusun Jambon</span>
                   </div>
                 </div>
                 <div class="quote-icon">
@@ -871,25 +788,20 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Testimonial Item -->
+          </div>
+          <!-- End Kisah Petani -->
 
-          <!-- Testimonial Item 4 -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+                    <!-- Kisah Petani 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis.</p>
+            <h4>Cerita dari Ladang Pak Sujadi: Kala Kopi Menjadi Bagian dari Kehidupan</h4>
+              <p>Namanya Pak Sujadi, petani kopi dari Dusun Jambon yang sudah akrab dengan kopi sejak usianya masih belia. Kopi selayaknya teman ‘tuk bertumbuh dan belajar. Ketertarikan terhadap kopi juga tlah lama tumbuh.</p>
               <div class="testimonial-footer">
                 <div class="testimonial-author">
-                  <img src="assets/img/person/person-f-9.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <img src="assets/img/petani/cth-pak-sujadi.jpeg" alt="Author" class="img-fluid rounded-circle" loading="lazy">
                   <div>
-                    <h5>Emily Johnson</h5>
-                    <span>UX Designer</span>
+                    <h5>Petani 4</h5>
+                    <span>Petani Kopi Dusun Jambon</span>
                   </div>
                 </div>
                 <div class="quote-icon">
@@ -897,25 +809,20 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Testimonial Item -->
+          </div>
+          <!-- End Kisah Petani -->
 
-          <!-- Testimonial Item 5 -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+          <!-- Kisah Petani 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>Praesent nonummy mi in odio. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</p>
+            <h4>Cerita dari Ladang Pak Sujadi: Kala Kopi Menjadi Bagian dari Kehidupan</h4>
+              <p>Namanya Pak Sujadi, petani kopi dari Dusun Jambon yang sudah akrab dengan kopi sejak usianya masih belia. Kopi selayaknya teman ‘tuk bertumbuh dan belajar. Ketertarikan terhadap kopi juga tlah lama tumbuh.</p>
               <div class="testimonial-footer">
                 <div class="testimonial-author">
-                  <img src="assets/img/person/person-f-11.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <img src="assets/img/petani/cth-pak-sujadi.jpeg" alt="Author" class="img-fluid rounded-circle" loading="lazy">
                   <div>
-                    <h5>Olivia Thompson</h5>
-                    <span>Entrepreneur</span>
+                    <h5>Petani 5</h5>
+                    <span>Petani Kopi Dusun Jambon</span>
                   </div>
                 </div>
                 <div class="quote-icon">
@@ -923,25 +830,20 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Testimonial Item -->
+          </div>
+          <!-- End Kisah Petani -->
 
-          <!-- Testimonial Item 6 -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+                    <!-- Kisah Petani 1 -->
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="testimonial-item">
-              <div class="stars">
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-              </div>
-              <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.</p>
+            <h4>Cerita dari Ladang Pak Sujadi: Kala Kopi Menjadi Bagian dari Kehidupan</h4>
+              <p>Namanya Pak Sujadi, petani kopi dari Dusun Jambon yang sudah akrab dengan kopi sejak usianya masih belia. Kopi selayaknya teman ‘tuk bertumbuh dan belajar. Ketertarikan terhadap kopi juga tlah lama tumbuh.</p>
               <div class="testimonial-footer">
                 <div class="testimonial-author">
-                  <img src="assets/img/person/person-m-12.webp" alt="Author" class="img-fluid rounded-circle" loading="lazy">
+                  <img src="assets/img/petani/cth-pak-sujadi.jpeg" alt="Author" class="img-fluid rounded-circle" loading="lazy">
                   <div>
-                    <h5>James Taylor</h5>
-                    <span>Financial Analyst</span>
+                    <h5>Petani 5</h5>
+                    <span>Petani Kopi Dusun Jambon</span>
                   </div>
                 </div>
                 <div class="quote-icon">
@@ -949,24 +851,90 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Testimonial Item -->
+          </div>
+          <!-- End Kisah Petani -->
+
 
         </div>
 
       </div>
 
-    </section><!-- /Testimonials Section -->
+    </section>
+    <!-- /Testimonials Section -->
 
-    <!-- Pricing Section -->
+        <!-- Blog Section -->
     <section id="pricing" class="pricing section">
-
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Our Pricing Plans</h2>
-        <div><span>Check Our</span> <span class="description-title">Pricing Plans</span></div>
+        <h2>Blog</h2>
+        <div><span>Artikel</span> <span class="description-title">Seputar Kopi</span></div>
       </div><!-- End Section Title -->
 
-      <div class="container pricing-toggle-container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4 px-5">
+        <!-- Artikel 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item h-100 d-flex flex-column justify-content-between shadow-sm rounded">
+            <div class="pricing-header">
+              <img src="assets/img/petani-kopi.webp" alt="Gambar Artikel Adira" class="img-fluid mb-3 rounded">
+              <h3 class="fw-semibold" style="color:#A67B5B">Judul Artikel Adira</h3>
+              <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+              <a href="artikel1.html" class="read-more"> Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="pricing-footer d-flex justify-content-between align-items-center px-4 pb-3">
+              <span class="name d-flex align-items-center text-secondary"><i class="lni lni-user me-1"></i> Adira</span>
+              <span class="date d-flex align-items-center text-secondary"><i class="lni lni-calendar me-1"></i> 15 Juli, 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artikel 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item h-100 d-flex flex-column justify-content-between shadow-sm rounded">
+            <div class="pricing-header">
+              <img src="assets/img/petani-kopi.webp" alt="Gambar Artikel Adira" class="img-fluid mb-3 rounded">
+              <h3 class="fw-semibold" style="color:#A67B5B">Judul Artikel Dinda</h3>
+              <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+              <a href="artikel1.html" class="read-more"> Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="pricing-footer d-flex justify-content-between align-items-center px-4 pb-3">
+              <span class="name d-flex align-items-center text-secondary"><i class="lni lni-user me-1"></i>Dinda</span>
+              <span class="date d-flex align-items-center text-secondary"><i class="lni lni-calendar me-1"></i> 15 Juli, 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artikel 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="pricing-item h-100 d-flex flex-column justify-content-between shadow-sm rounded">
+            <div class="pricing-header">
+              <img src="assets/img/petani-kopi.webp" alt="Gambar Artikel Adira" class="img-fluid mb-3 rounded">
+              <h3 class="fw-semibold" style="color:#A67B5B">Judul Artikel Naarah</h3>
+              <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+              <a href="artikel1.html" class="read-more"> Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
+            </div>
+            <div class="pricing-footer d-flex justify-content-between align-items-center px-4 pb-3">
+              <span class="name d-flex align-items-center text-secondary"><i class="lni lni-user me-1"></i>Naarah</span>
+              <span class="date d-flex align-items-center text-secondary"><i class="lni lni-calendar me-1"></i> 15 Juli, 2025</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Blog Section End -->
+
+
+    <!-- Pricing Section -->
+    <!-- <section id="pricing" class="pricing section"> -->
+
+      <!-- Section Title -->
+      <!-- <div class="container section-title" data-aos="fade-up">
+        <h2>Our Pricing Plans</h2>
+        <div><span>Check Our</span> <span class="description-title">Pricing Plans</span></div>
+      </div> -->
+      <!-- End Section Title -->
+
+      <!-- <div class="container pricing-toggle-container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="d-flex align-items-center justify-content-center text-center">
           <div class="pricing-toggle">
@@ -1009,7 +977,7 @@
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="pricing-item featured">
-              <!-- <div class="pricing-badge">Popular</div> -->
+              <div class="pricing-badge">Popular</div>
               <div class="pricing-header">
                 <h3>Professional Plan</h3>
                 <div class="price-monthly">$2,999<span>/mo</span></div>
@@ -1064,21 +1032,23 @@
         </div>
 
       </div>
-
-    </section><!-- /Pricing Section -->
+    </section>
+    -->
+    <!-- /Pricing Section -->
 
     <!-- Faq Section -->
-    <section id="faq" class="faq section">
+    <!-- <section id="faq" class="faq section"> -->
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <!-- <div class="container section-title" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
         <div><span>Frequently Asked</span> <span class="description-title">Questions</span></div>
-      </div><!-- End Section Title -->
+      </div> -->
+      <!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
 
-        <div class="row gy-4 justify-content-between">
+        <!-- <div class="row gy-4 justify-content-between">
           <div class="col-lg-8">
 
             <div class="faq-list">
@@ -1090,9 +1060,10 @@
                   </p>
                 </div>
                 <i class="bi bi-plus faq-toggle"></i>
-              </div><!-- End FAQ Item-->
+              </div> -->
+              <!-- End FAQ Item-->
 
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+              <!-- <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
                 <h3>Curabitur aliquet quam id dui posuere blandit?</h3>
                 <div class="faq-content">
                   <p>
@@ -1100,9 +1071,10 @@
                   </p>
                 </div>
                 <i class="bi bi-plus faq-toggle"></i>
-              </div><!-- End FAQ Item-->
+              </div> -->
+              <!-- End FAQ Item-->
 
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+              <!-- <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
                 <h3>Sed porttitor lectus nibh ullamcorper sit amet?</h3>
                 <div class="faq-content">
                   <p>
@@ -1110,9 +1082,10 @@
                   </p>
                 </div>
                 <i class="bi bi-plus faq-toggle"></i>
-              </div><!-- End FAQ Item-->
+              </div> -->
+              <!-- End FAQ Item-->
 
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+              <!-- <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
                 <h3>Nulla quis lorem ut libero malesuada feugiat?</h3>
                 <div class="faq-content">
                   <p>
@@ -1120,9 +1093,10 @@
                   </p>
                 </div>
                 <i class="bi bi-plus faq-toggle"></i>
-              </div><!-- End FAQ Item-->
+              </div> -->
+              <!-- End FAQ Item-->
 
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+              <!-- <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
                 <h3>Vestibulum ac diam sit amet quam vehicula elementum?</h3>
                 <div class="faq-content">
                   <p>
@@ -1130,10 +1104,10 @@
                   </p>
                 </div>
                 <i class="bi bi-plus faq-toggle"></i>
-              </div><!-- End FAQ Item-->
+              </div> -->
+              <!-- End FAQ Item-->
 
-            </div>
-
+            <!-- </div>
           </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -1147,8 +1121,9 @@
         </div>
 
       </div>
-
-    </section><!-- /Faq Section -->
+    </section>
+    -->
+    <!-- /Faq Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
