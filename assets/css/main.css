@@ -821,6 +821,19 @@ section,
   transform: scale(1.03);
 }
 
+.hero .hero-image video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.5s ease;
+  object-fit: cover;
+  display: block;
+}
+
+.hero .hero-image video:hover {
+  transform: scale(1.03);
+}
+
 @media (max-width: 992px) {
   .hero {
     padding: 120px 0 80px 0;
@@ -969,7 +982,7 @@ section,
 }
 
 .about .about-content .lead {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   color: var(--default-color);
@@ -1425,6 +1438,34 @@ section,
   transition: background-color 0.3s ease;
 }
 
+/* Untuk layar kecil (smartphone) */
+@media (max-width: 575.98px) {
+  .wa-button {
+    font-size: 13px;
+    padding: 6px 14px;
+    border-radius: 10px;
+  }
+}
+
+/* Untuk layar medium (tablet) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .wa-button {
+    font-size: 14px;
+    padding: 7px 18px;
+    border-radius: 12px;
+  }
+}
+
+/* Untuk layar besar (desktop) */
+@media (min-width: 992px) {
+  .wa-button {
+    font-size: 15px;
+    padding: 8px 20px;
+    border-radius: 15px;
+  }
+}
+
+
 .wa-button i {
   margin-right: 10px;
   font-size: 18px;
@@ -1620,7 +1661,7 @@ section,
 }
 
 .why-choose-us .features-content h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: var(--heading-color);
@@ -1628,12 +1669,19 @@ section,
 
 @media (max-width: 768px) {
   .why-choose-us .features-content h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
 .why-choose-us .features-content .lead {
   font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--default-color);
+}
+
+.why-choose-us .features-content .bold {
+  font-size: 1rem;
   font-weight: 500;
   margin-bottom: 1.5rem;
   color: var(--default-color);
