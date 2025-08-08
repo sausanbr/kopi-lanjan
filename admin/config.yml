@@ -14,5 +14,6 @@ collections:
     fields:
       - { label: "Judul", name: "title", widget: "string" }
       - { label: "Tanggal", name: "date", widget: "datetime" }
+      - { label: "Penulis", name: "author", widget: "string" }
       - { label: "Foto", name: "image", widget: "image" }
       - { label: "Isi Artikel", name: "body", widget: "markdown" }
