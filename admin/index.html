@@ -1,23 +1,37 @@
-<!-- <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <script src="https://unpkg.com/netlify-cms-app/dist/netlify-cms.js"></script>
-  </body>
-</html> -->
-
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>CMS Admin</title>
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </head>
-  <body>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>CMS Admin</title>
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  <script src="https://unpkg.com/netlify-cms-backend-contentful/dist/netlify-cms-backend-contentful.js"></script>
+</head>
+<body>
+  <section id="artikel-desa">
+    <h2>Artikel Desa</h2>
+    <div id="artikel-list"></div>
+  </section>
+  
+  <script>
+  async function loadArtikel() {
+    const res = await fetch(
+      `https://cdn.contentful.com/spaces/${window.CONTENTFUL_SPACE_ID}/environments/master/entries?access_token=${window.CONTENTFUL_ACCESS_TOKEN}&content_type=artikelDesa`
+    );
+    const data = await res.json();
+    const container = document.getElementById('artikel-list');
+  
+    data.items.forEach(item => {
+      const judul = item.fields.judul['en-US'];
+      const penulis = item.fields.penulis['en-US'];
+      const tanggal = item.fields.tanggalUpload['en-US'];
+      const artikel = document.createElement('div');
+      artikel.innerHTML = `<h3>${judul}</h3><p><em>${penulis} - ${tanggal}</em></p>`;
+      container.appendChild(artikel);
+    });
+  }
+  loadArtikel();
+  </script>
+  <script src="/admin/cms-init.js"></script>
+</body>
 </html>
+
