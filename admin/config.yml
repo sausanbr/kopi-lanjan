@@ -5,13 +5,14 @@ backend:
   environment: master
 
 media_folder: "assets/img/uploads"
-public_folder: "/uploads"
+public_folder: "/assets/img/uploads"
 
 collections:
   - name: "artikel-desa"
     label: "Artikel Desa"
     folder: "content/artikel-desa"
     create: true
+    slug: "{{slug}}"
     fields:
       - { label: "Judul", name: "judul", widget: "string" }
       - { label: "Tanggal Upload", name: "tanggalUpload", widget: "datetime" }
