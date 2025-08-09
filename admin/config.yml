@@ -1,19 +1,21 @@
 backend:
-  name: git-gateway
-  branch: main
+  name: contentful
+  space_id: ${CONTENTFUL_SPACE_ID}
+  access_token: ${CONTENTFUL_ACCESS_TOKEN}
+  preview_token: ${CONTENTFUL_PREVIEW_TOKEN}
+  environment: master
 
-media_folder: "assets/img/uploads"
-public_folder: "/assets/img/uploads"
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
-  - name: "artikel"
-    label: "Artikel Petani"
-    folder: "artikel"
+  - name: "artikel-desa"
+    label: "Artikel Desa"
+    folder: "content/artikel-desa"
     create: true
-    slug: "{{slug}}"
     fields:
-      - { label: "Judul", name: "title", widget: "string" }
-      - { label: "Tanggal", name: "date", widget: "datetime" }
-      - { label: "Penulis", name: "author", widget: "string" }
-      - { label: "Foto", name: "image", widget: "image" }
-      - { label: "Isi Artikel", name: "body", widget: "markdown" }
+      - { label: "Judul", name: "judul", widget: "string" }
+      - { label: "Tanggal Upload", name: "tanggalUpload", widget: "datetime" }
+      - { label: "Penulis", name: "penulis", widget: "string" }
+      - { label: "Foto", name: "foto", widget: "image" }
+      - { label: "Isi Artikel", name: "isiArtikel", widget: "markdown" }
