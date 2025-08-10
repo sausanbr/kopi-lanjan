@@ -9,7 +9,7 @@
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444d4d; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #6F4E37; /* Color for headings, subheadings and title throughout the website */
+  --heading-color: #A67B5B; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #A67B5B; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -2996,7 +2996,7 @@ section,
 
 .blog-section .blog-content p {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 12px;
   text-align: justify;
 }
 
@@ -3178,7 +3178,7 @@ section,
 
   .story-content p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 12px;
     text-align: justify;
   }
 
@@ -3317,3 +3317,57 @@ section,
   text-decoration: underline;
 }
 
+.lihat-berita-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.lihat-berita-btn {
+  text-decoration: none;
+  color: #A67B5B;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.lihat-berita-btn:hover {
+  color: #6F4E37;
+}
+
+.admin {
+  min-height: 82vh; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  padding: 0; 
+  background-color: #6F4E37;
+}
+
+.admin .admin-content {
+  text-align: center;
+  color: var(--background-color); 
+}
+
+.admin .admin-content h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.admin .admin-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn-login {
+  text-decoration: none;
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.btn-login:hover {
+  background-color: #6F4E37;
+}

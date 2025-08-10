@@ -27,7 +27,7 @@ window.renderArticleList = async function (containerId) {
     cont.innerHTML = '<p>Memuat artikel...</p>';
     try {
       const data = await fetchArticles();
-      const items = data.items || [];
+       const items = (data.items || []).slice(0, 4);
       const includes = data.includes || {};
       if (!items.length) {
         cont.innerHTML = '<p>Belum ada artikel.</p>';
@@ -52,7 +52,7 @@ window.renderArticleList = async function (containerId) {
                 ${imgUrl ? `<img src="${imgUrl}" alt="${title}" class="img-fluid">` : ''}
                 <h3 class="fw-semibold" style="color:#A67B5B">${title}</h3>
                 <p class="mb-3">${deskripsi}</p>
-                <a href="artikel.html?id=${id}" class="read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
+                <a href="berita.html?id=${id}" class="read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
               </div>
               <div class="pricing-footer d-flex justify-content-between align-items-center px-4 pb-3">
                 <span class="name d-flex align-items-center text-secondary"><i class="lni lni-user me-1"></i>${penulis}</span>
@@ -62,8 +62,13 @@ window.renderArticleList = async function (containerId) {
           </div>
         `;
       }).join('');
-      cont.innerHTML = `<div class="row g-4">${listHtml}</div>`;
-    } catch (err) {
+      cont.innerHTML = `<div class="row g-4">${listHtml}</div>
+      <div class="lihat-berita-wrapper">
+        <a href="list-berita.html" class="lihat-berita-btn">Lihat berita selengkapnya &raquo;</a>
+      </div>
+    `;
+    } 
+    catch (err) {
       console.error(err);
       cont.innerHTML = `<p>Gagal memuat artikel. ${err.message}</p>`;
     }
@@ -153,32 +158,35 @@ window.renderArticleDetail = async function (containerId, entryId) {
       imgUrl = findAssetUrl(f.foto.sys.id, includes) || '';
     }
     const body = f.isiArtikel ? simpleRichTextToHtml(f.isiArtikel) : '';
-    console.log('Panjang isiArtikel (JSON string):', JSON.stringify(f.isiArtikel).length);
 
     cont.innerHTML = `
     <section class="blog-section py-0">
-        <header id="header" class="header-blog">
+      <header id="header" class="header-blog">
         <div class="container position-relative d-flex align-items-center justify-content-between">
-            <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-            <h1 class="sitename me-3" style="margin-left: 20px;">Desa Lanjan</h1>
-            </a>
+          
+          <!-- Logo -->
+          
+          <!-- Nav Menu -->
+          <a href="/kopi-lanjan/index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <h1 class="sitename" style="margin-left: 20px;">Desa Lanjan</h1>
+          </a>
         </div>
-        </header>
-        <div class="blog-container">
+      </header>
+
+      <div class="blog-container">
         <h1 class="blog-title">${title}</h1>
         <div class="blog-meta">
-            <a href="#"><i class="lni lni-user"></i> ${penulis}</a> · 
-            <a href="#"><i class="lni lni-calendar"></i> ${tanggal}</a>
+          <a href="#"><i class="lni lni-user"></i> ${penulis}</a> · 
+          <a href="#"><i class="lni lni-calendar"></i> ${tanggal}</a>
         </div>
         ${imgUrl ? `<img src="${imgUrl}" alt="${title}" class="blog-image">` : ''}
         <div class="blog-content">
-            ${body}
+          ${body}
         </div>
-        </div>
+      </div>
     </section>
     `;
 
-    // Pastikan script navbar aktif lagi
     if (typeof initNavMenu === "function") {
       initNavMenu();
     }

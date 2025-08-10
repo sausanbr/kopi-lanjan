@@ -1,0 +1,173 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title> Desa Lanjan </title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo-kkn.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+   <!-- LineIcons CSS -->
+  <link rel="stylesheet" href="https://cdn.lineicons.com/2.0/LineIcons.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <main class="main">
+    <section id="berita" class="pricing section light-background py-0" id="berita">
+      <header id="header" class="header-blog">
+        <div class="container position-relative d-flex align-items-center justify-content-between">
+          <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+            <h1 class="sitename">Desa Lanjan</h1>
+          </a>
+  
+          <nav id="navmenu" class="navmenu">
+            <ul>
+              <li><a href="#hero" class="active">Beranda</a></li>
+              <li class="dropdown"><a href="#about"><span>Tentang</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#about">Profil Desa</a></li>
+                  <li class="dropdown"><a href="#why-choose-us"><span>Sejarah Kopi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="#">Tradisi Budaya</a></li>
+                      <li><a href="#">Istilah Lokal</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#work-process">Proses Pengolahan</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#services"><span>Katalog Produk</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#services">Kopi Petani</a></li>
+                  <li><a href="#team">Inovasi Produk</a></li>
+                </ul>
+              </li>
+              <li><a href="#testimonials">Kisah Petani</a></li>
+              <li><a href="#pricing">Blog</a></li>
+              <li><a href="#footer">Profil Tim</a></li>
+            </ul>
+            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
+  
+          <!-- <a class="btn-getstarted" href="#consultation">Get Started</a> -->
+  
+        </div>
+        
+      </header>
+      <div class="blog-container py-4">
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Berita</h2>
+        <div><span>Berita</span> <span class="description-title">Desa Lanjan</span></div>
+      </div>
+      <!-- End Section Title -->
+
+    <div class="row gy-4 px-5" id="artikel-container">
+
+    </div>
+    </section>
+    </main>
+    <footer id="footer" class="footer light-background"> 
+      <div class="container copyright text-center mt-4">
+      <h4>© Website ini dibuat oleh Tim KKN-T 135 Universitas Diponegoro Tahun 2025 🤎</h4>
+      </div>
+    </footer>
+</body>
+
+
+<script>
+  async function fetchArticles() {
+    const SPACE = "fejitalayxrw";
+    const TOKEN = "3HHTehDFYLA079AtICueEv0UtN3vV1m0ImLx4LnY3_0";
+    const ENV = "master";
+    const BASE = `https://cdn.contentful.com/spaces/${SPACE}/environments/${ENV}`;
+
+    const url = `${BASE}/entries?access_token=${TOKEN}&content_type=artikelDesa&order=-fields.tanggalUpload`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('Gagal fetch artikel: ' + res.status);
+    return res.json();
+  }
+
+  function findAssetUrl(assetId, includes) {
+    if (!includes || !includes.Asset) return null;
+    const found = includes.Asset.find(a => a.sys?.id === assetId);
+    if (!found?.fields?.file) return null;
+    let url = found.fields.file.url || '';
+    if (url.startsWith('//')) url = 'https:' + url;
+    if (url.startsWith('/')) url = 'https:' + url;
+    return url;
+  }
+
+  async function renderArticleList() {
+    const container = document.getElementById('artikel-container');
+    if (!container) return;
+    container.innerHTML = '<p>Memuat artikel...</p>';
+    try {
+      const data = await fetchArticles();
+      const items = data.items || [];
+      const includes = data.includes || {};
+      if (!items.length) {
+        container.innerHTML = '<p>Belum ada artikel.</p>';
+        return;
+      }
+      const listHtml = items.map(it => {
+        const f = it.fields || {};
+        const title = f.judul || 'Tanpa Judul';
+        const penulis = f.penulis || 'Anonim';
+        const tanggal = f.tanggalUpload
+          ? new Date(f.tanggalUpload).toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' })
+          : '';
+        let imgUrl = '';
+        if (f.foto?.sys?.id) {
+          imgUrl = findAssetUrl(f.foto.sys.id, includes) || '';
+        }
+        const deskripsi = f.deskripsiSingkat || '';
+        const id = it.sys?.id;
+
+        return `
+          <div class="col-lg-3 col-md-7">
+            <div class="pricing-item d-flex flex-column justify-content-between shadow-sm rounded">
+              <div class="pricing-header">
+                ${imgUrl ? `<img src="${imgUrl}" alt="${title}" class="img-fluid">` : ''}
+                <h3 class="fw-semibold" style="color:#A67B5B">${title}</h3>
+                <p class="mb-3">${deskripsi}</p>
+                <a href="berita.html?id=${id}" class="read-more">Baca selengkapnya <i class="bi bi-arrow-right"></i></a>
+              </div>
+              <div class="pricing-footer d-flex justify-content-between align-items-center px-4 pb-3">
+                <span class="name d-flex align-items-center text-secondary"><i class="lni lni-user me-1"></i>${penulis}</span>
+                <span class="date d-flex align-items-center text-secondary"><i class="lni lni-calendar me-1"></i>${tanggal}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      container.innerHTML = listHtml;
+    } catch (err) {
+      console.error(err);
+      container.innerHTML = `<p>Gagal memuat artikel. ${err.message}</p>`;
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', renderArticleList);
+</script>
