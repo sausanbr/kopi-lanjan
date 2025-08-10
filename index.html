@@ -28,6 +28,16 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    /* ringkasan gaya supaya cepat tampil */
+    .artikel-grid { display:flex; flex-wrap:wrap; gap:18px; }
+    .artikel-card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.06); width: calc(33.333% - 12px); min-width:260px; display:flex; flex-direction:column; text-decoration:none; color:inherit;}
+    .artikel-thumb img{ width:100%; height:200px; object-fit:cover; display:block;}
+    .artikel-body{ padding:14px; }
+    .meta{ color:#777; font-size:13px; margin-bottom:8px;}
+    @media (max-width:900px){ .artikel-card{ width: calc(50% - 12px);} }
+    @media (max-width:600px){ .artikel-card{ width:100%; } .artikel-thumb img{ height:160px } }
+  </style>
 
 </head>
 
@@ -283,99 +293,6 @@
       
     </section>
     <!-- /Why Choose Us Section -->
-    
-    <!-- Work Process Section -->
-    <!-- <section id="work-process" class="work-process section"> -->
-
-      <!-- Section Title -->
-      <!-- <div class="container section-title" data-aos="fade-up"> -->
-        <!-- <h2>Proses Pengolahan</h2>
-        <div><span>Proses Pengolahan</span> <span class="description-title">Kopi Desa Lanjan</span></div> 
-      </div> -->
-      <!-- End Section Title -->
-
-      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="steps-content">
-              <h2>Lorem Ipsum Dolor Sit Amet</h2>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-
-              <div class="steps-cta">
-                <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                <a href="#about" class="btn btn-outline">Learn More</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="zoom-out" data-aos-delay="300">
-            <div class="steps-list">
-              <div class="step-item">
-                <div class="step-number">01</div>
-                <div class="step-content">
-                  <h3>Persiapan Awal</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                </div>
-              </div> 
-
-
-              <div class="step-item">
-                <div class="step-number">02</div>
-                <div class="step-content">
-                  <h3>Pemupukan</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                </div>
-              </div>
-
-              <div class="step-item">
-                <div class="step-number">03</div>
-                <div class="step-content">
-                  <h3>Ngrempel</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                </div>
-              </div>
-
-                <div class="step-item">
-                <div class="step-number">04</div>
-                <div class="step-content">
-                  <h3>Ngrempel</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                </div>
-              </div>
-
-              <div class="step-item">
-                <div class="step-number">05</div>
-                <div class="step-content">
-                  <h3>Babat</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                </div>
-              </div>
-
-              <div class="step-item">
-                <div class="step-number">06</div>
-                <div class="step-content">
-                  <h3>Panen Petik Merah</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                </div>
-              </div>
-
-              <div class="step-item">
-                <div class="step-number">07</div>
-                <div class="step-content">
-                  <h3>Pengeringan</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section> -->
-    <!-- /Work Process Section -->
 
     <!-- Services Section -->
     <section id="services" class="services section">
@@ -552,12 +469,6 @@
                 <div class="team-image">
                   <img src="assets/img/produk/scrub2.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="team-overlay">
-                    <!-- <div class="social-links">
-                      <a href="#"><i class="bi bi-twitter-x"></i></a>
-                      <a href="#"><i class="bi bi-facebook"></i></a>
-                      <a href="#"><i class="bi bi-instagram"></i></a>
-                      <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div> -->
                   </div>
                 </div>
                 <div class="team-content">
@@ -574,12 +485,6 @@
                 <div class="team-image">
                   <img src="assets/img/produk/lilin2.jpg" class="img-fluid" alt="" loading="lazy">
                   <div class="team-overlay">
-                    <!-- <div class="social-links">
-                      <a href="#"><i class="bi bi-twitter-x"></i></a>
-                      <a href="#"><i class="bi bi-facebook"></i></a>
-                      <a href="#"><i class="bi bi-instagram"></i></a>
-                      <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div> -->
                   </div>
                 </div>
                 <div class="team-content">
@@ -599,80 +504,6 @@
       </div>
 
     </section><!-- /Team Section -->
-
-    <!-- Consultation Section -->
-    <!-- <section id="consultation" class="consultation section light-background"> -->
-
-      <!-- Section Title -->
-      <!-- <div class="container section-title" data-aos="fade-up">
-        <h2>Consultation Form</h2>
-        <div><span>Schedule a&nbsp;</span> <span class="description-title">Consultation Form</span></div>
-      </div> -->
-      <!-- End Section Title -->
-
-      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="cta-wrapper">
-          <div class="row align-items-center">
-            <div class="col-lg-7" data-aos="fade-up" data-aos-delay="200">
-              <div class="cta-content">
-                <h2>Ready to Transform Your Business?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="cta-stats">
-                  <div class="stat-item">
-                    <span class="number"><span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="0" class="purecounter">500</span>+</span>
-                    <span class="text">Projects Completed</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="number"><span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="0" class="purecounter">98</span>%</span>
-                    <span class="text">Client Satisfaction</span>
-                  </div>
-                  <div class="stat-item">
-                    <span class="number"><span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="0" class="purecounter">15</span>+</span>
-                    <span class="text">Years Experience</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5" data-aos="fade-up" data-aos-delay="300">
-              <div class="cta-form">
-                <h3>Schedule a Free Consultation</h3>
-                <p>Fill out the form below and our team will contact you within 24 hours.</p>
-                <form action="forms/consultation.php" method="post" class="php-email-form">
-                  <div class="form-group">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-                  <div class="form-group mt-3">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-                  <div class="form-group mt-3">
-                    <input type="text" class="form-control" name="phone" placeholder="Your Phone">
-                  </div>
-                  <div class="form-group mt-3">
-                    <select class="form-control" name="service" required="">
-                      <option value="" disabled="" selected="">Select Service</option>
-                      <option value="Strategic Planning">Strategic Planning</option>
-                      <option value="Business Transformation">Business Transformation</option>
-                      <option value="Financial Advisory">Financial Advisory</option>
-                      <option value="Human Resources">Human Resources</option>
-                      <option value="Technology Consulting">Technology Consulting</option>
-                    </select>
-                  </div>
-                  <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-                  <div class="text-center">
-                    <button type="submit">Get Started</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- /End Consultation Section -->
      
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background">
@@ -915,364 +746,16 @@
     </section>
     <!-- Blog Section End -->
 
-
-    <!-- Pricing Section -->
-    <!-- <section id="pricing" class="pricing section"> -->
-
-      <!-- Section Title -->
-      <!-- <div class="container section-title" data-aos="fade-up">
-        <h2>Our Pricing Plans</h2>
-        <div><span>Check Our</span> <span class="description-title">Pricing Plans</span></div>
-      </div> -->
-      <!-- End Section Title -->
-
-      <!-- <div class="container pricing-toggle-container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="d-flex align-items-center justify-content-center text-center">
-          <div class="pricing-toggle">
-            <span class="monthly active">Monthly</span>
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider"></span>
-            </label>
-            <span class="yearly">Yearly</span>
-            <div class="discount-badge">Save 20%</div>
-          </div>
-
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="pricing-item">
-              <div class="pricing-header">
-                <h3>Basic Plan</h3>
-                <div class="price-monthly">$1,499<span>/mo</span></div>
-                <div class="price-yearly">$14,390<span>/year</span></div>
-                <p>Perfect for small businesses</p>
-              </div>
-              <div class="pricing-features">
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> Business Analysis</li>
-                  <li><i class="bi bi-check-circle"></i> Strategic Planning</li>
-                  <li><i class="bi bi-check-circle"></i> 10 Consulting Hours</li>
-                  <li><i class="bi bi-check-circle"></i> Monthly Report</li>
-                  <li><i class="bi bi-x-circle"></i> Market Research</li>
-                  <li><i class="bi bi-x-circle"></i> Implementation Support</li>
-                  <li><i class="bi bi-x-circle"></i> Dedicated Consultant</li>
-                </ul>
-              </div>
-              <div class="pricing-footer">
-                <a href="#contact" class="btn btn-outline">Get Started</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="pricing-item featured">
-              <div class="pricing-badge">Popular</div>
-              <div class="pricing-header">
-                <h3>Professional Plan</h3>
-                <div class="price-monthly">$2,999<span>/mo</span></div>
-                <div class="price-yearly">$28,790<span>/year</span></div>
-                <p>Ideal for growing companies</p>
-              </div>
-              <div class="pricing-features">
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> Business Analysis</li>
-                  <li><i class="bi bi-check-circle"></i> Strategic Planning</li>
-                  <li><i class="bi bi-check-circle"></i> 25 Consulting Hours</li>
-                  <li><i class="bi bi-check-circle"></i> Weekly Reports</li>
-                  <li><i class="bi bi-check-circle"></i> Market Research</li>
-                  <li><i class="bi bi-check-circle"></i> Implementation Support</li>
-                  <li><i class="bi bi-x-circle"></i> Dedicated Consultant</li>
-                </ul>
-              </div>
-              <div class="pricing-footer">
-                <a href="#contact" class="btn btn-primary">Get Started</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="pricing-item">
-              <div class="pricing-header">
-                <h3>Enterprise Plan</h3>
-                <div class="price-monthly">$4,999<span>/mo</span></div>
-                <div class="price-yearly">$47,990<span>/year</span></div>
-                <p>For established enterprises</p>
-              </div>
-              <div class="pricing-features">
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> Business Analysis</li>
-                  <li><i class="bi bi-check-circle"></i> Strategic Planning</li>
-                  <li><i class="bi bi-check-circle"></i> 50 Consulting Hours</li>
-                  <li><i class="bi bi-check-circle"></i> Weekly Reports</li>
-                  <li><i class="bi bi-check-circle"></i> Market Research</li>
-                  <li><i class="bi bi-check-circle"></i> Implementation Support</li>
-                  <li><i class="bi bi-check-circle"></i> Dedicated Consultant</li>
-                </ul>
-              </div>
-              <div class="pricing-footer">
-                <a href="#contact" class="btn btn-outline">Get Started</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="pricing-note text-center mt-5" data-aos="fade-up" data-aos-delay="600">
-          <p>Need a custom solution? <a href="#contact">Contact us</a> for a personalized quote.</p>
-        </div>
-
-      </div>
-    </section>
-    -->
-    <!-- /Pricing Section -->
-
-    <!-- Faq Section -->
-    <!-- <section id="faq" class="faq section"> -->
-
-      <!-- Section Title -->
-      <!-- <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-        <div><span>Frequently Asked</span> <span class="description-title">Questions</span></div>
-      </div> -->
-      <!-- End Section Title -->
-
-      <!-- <div class="container" data-aos="fade-up" data-aos-delay="100"> -->
-
-        <!-- <div class="row gy-4 justify-content-between">
-          <div class="col-lg-8">
-
-            <div class="faq-list">
-              <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="100">
-                <h3>Vivamus suscipit tortor eget felis porttitor volutpat?</h3>
-                <div class="faq-content">
-                  <p>
-                    Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Nulla porttitor accumsan tincidunt.
-                  </p>
-                </div>
-                <i class="bi bi-plus faq-toggle"></i>
-              </div> -->
-              <!-- End FAQ Item-->
-
-              <!-- <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
-                <h3>Curabitur aliquet quam id dui posuere blandit?</h3>
-                <div class="faq-content">
-                  <p>
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Proin eget tortor risus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar.
-                  </p>
-                </div>
-                <i class="bi bi-plus faq-toggle"></i>
-              </div> -->
-              <!-- End FAQ Item-->
-
-              <!-- <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
-                <h3>Sed porttitor lectus nibh ullamcorper sit amet?</h3>
-                <div class="faq-content">
-                  <p>
-                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum.
-                  </p>
-                </div>
-                <i class="bi bi-plus faq-toggle"></i>
-              </div> -->
-              <!-- End FAQ Item-->
-
-              <!-- <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <h3>Nulla quis lorem ut libero malesuada feugiat?</h3>
-                <div class="faq-content">
-                  <p>
-                    Donec sollicitudin molestie malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel.
-                  </p>
-                </div>
-                <i class="bi bi-plus faq-toggle"></i>
-              </div> -->
-              <!-- End FAQ Item-->
-
-              <!-- <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
-                <h3>Vestibulum ac diam sit amet quam vehicula elementum?</h3>
-                <div class="faq-content">
-                  <p>
-                    Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                  </p>
-                </div>
-                <i class="bi bi-plus faq-toggle"></i>
-              </div> -->
-              <!-- End FAQ Item-->
-
-            <!-- </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="faq-card">
-              <i class="bi bi-chat-dots-fill"></i>
-              <h3>Can't find answer to your question?</h3>
-              <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur aliquet quam id dui posuere blandit. Nulla quis lorem ut libero malesuada feugiat.</p>
-              <a href="#contact" class="btn btn-primary">Contact Us</a>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    -->
-    <!-- /Faq Section -->
-
-    <!-- Contact Section -->
-    <!-- <section id="contact" class="contact section"> -->
-      <!-- Section Title -->
-      <!-- <div class="container section-title">
-        <h2>Contact</h2>
-        <div><span>Contact</span> <span class="description-title">Us</span></div>
-      </div> -->
-      <!-- End Section Title -->
-
-      <!-- <div class="container">
-        <div class="row">
-          <div class="col-lg-5">
-            <div class="contact-info">
-              <div class="contact-card">
-                <h3>Contact Information</h3>
-                <p>Feel free to reach out with any questions about the book, speaking engagements, or media inquiries.</p>
-
-                <div class="contact-details">
-                  <div class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    <div>
-                      <h4>Email:</h4>
-                      <p>author@example.com</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item">
-                    <i class="bi bi-telephone"></i>
-                    <div>
-                      <h4>Phone:</h4>
-                      <p>+1 (555) 123-4567</p>
-                    </div>
-                  </div>
-
-                  <div class="contact-item">
-                    <i class="bi bi-geo-alt"></i>
-                    <div>
-                      <h4>Address:</h4>
-                      <p>123 Book Street, Literary Lane</p>
-                      <p>Wordsmith City, NY 10001</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="social-links">
-                  <a href="#"><i class="bi bi-twitter"></i></a>
-                  <a href="#"><i class="bi bi-facebook"></i></a>
-                  <a href="#"><i class="bi bi-instagram"></i></a>
-                  <a href="#"><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="contact-form-wrapper">
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                <div class="row">
-                  <div class="col-md-6 form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="John Doe" required="">
-                  </div>
-                  <div class="col-md-6 form-group mt-3 mt-md-0">
-                    <label for="email">Your Email</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="john@example.com" required="">
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <label for="subject">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="I loved your book!" required="">
-                </div>
-                <div class="form-group mt-3">
-                  <label for="message">Message</label>
-                  <textarea class="form-control" name="message" rows="7" placeholder="Your message here..." required=""></textarea>
-                </div>
-
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-
-                <div class="text-center">
-                  <button type="submit">Send Message</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> 
-    </section> -->
-    <!-- /Contact Section -->
+    <h1>Kisah & Artikel — Desa Lanjan</h1>
+    <div id="artikel-list"></div>
 
   </main>
 
   <footer id="footer" class="footer light-background">
 
     <div class="container copyright text-center mt-4">
-      <!-- <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-geo-alt icon"></i>
-          <div class="address">
-            <h4>Address</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p></p>
-          </div>
-
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-telephone icon"></i>
-          <div>
-            <h4>Contact</h4>
-            <p>
-              <strong>Phone:</strong> <span>+1 5589 55488 55</span><br>
-              <strong>Email:</strong> <span>info@example.com</span><br>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 d-flex">
-          <i class="bi bi-clock icon"></i>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>
-              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
-              <strong>Sunday</strong>: <span>Closed</span>
-            </p>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6">
-          <h4>Follow Us</h4>
-          <div class="social-links d-flex">
-            <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-
-      </div> -->
-      <h4>© Website ini dibuat oleh Tim KKN-T 135 Universitas Diponegoro Tahun 2025 🤎</h4>
+    <h4>© Website ini dibuat oleh Tim KKN-T 135 Universitas Diponegoro Tahun 2025 🤎</h4>
     </div>
-
-    <!-- <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Consulting.</strong> <span>All Rights Reserved</span></p>
-      <div class="credits"> -->
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div> -->
 
   </footer>
 
@@ -1292,6 +775,28 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- inject env vars (Netlify can replace via build) -->
+  <script>
+    // Netlify will not automatically inject process.env into client JS.
+    // We'll get env from global window variables that Netlify can write during build.
+    // If you deploy on Netlify, set these site env vars and add a small build plugin to inject them,
+    // or simply copy token/value manually into these window vars for testing (avoid committing tokens).
+    window.CONTENTFUL_SPACE_ID = '{{CONTENTFUL_SPACE_ID}}';
+    window.CONTENTFUL_DELIVERY_TOKEN = '{{CONTENTFUL_DELIVERY_TOKEN}}';
+    window.CONTENTFUL_ENVIRONMENT = '{{CONTENTFUL_ENVIRONMENT}}' || 'master';
+  </script>
+
+  <script src="assets/js/contentful.js"></script>
+  <script>
+    // after loading contentful.js, call render
+    document.addEventListener('DOMContentLoaded', function(){
+      if (typeof renderArticleList === 'function') {
+        renderArticleList('artikel-list');
+      } else {
+        console.error('renderArticleList tidak ditemukan');
+      }
+    });
+  </script>
 </body>
 
 </html>

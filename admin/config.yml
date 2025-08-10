@@ -1,5 +1,5 @@
 backend:
-  name: contentful
+  name: git-gateaway
   space_id: ${CONTENTFUL_SPACE_ID}
   access_token: ${CONTENTFUL_DELIVERY_TOKEN}
   environment: master
