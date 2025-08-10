@@ -750,10 +750,7 @@
     <div id="artikel-container"></div>
   </main>
 
-<script>
-  renderArticleList("artikel-container");
-</script>
-
+  
   <footer id="footer" class="footer light-background">
 
     <div class="container copyright text-center mt-4">
@@ -768,6 +765,10 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <script>
+    renderArticleList("artikel-container");
+  </script>
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
@@ -783,7 +784,7 @@
     window.CONTENTFUL_SPACE_ID = "fejitalayxrw";
     window.CONTENTFUL_DELIVERY_TOKEN = "3HHTehDFYLA079AtICueEv0UtN3vV1m0ImLx4LnY3_0";
     window.CONTENTFUL_ENVIRONMENT = '{{CONTENTFUL_ENVIRONMENT}}' || 'master';
-  </script>
+    </script>
 
   <script src="assets/js/contentful.js"></script>
   <script>
@@ -795,7 +796,7 @@
         console.error('renderArticleList tidak ditemukan');
       }
     });
-  </script>
+    </script>
 </body>
 
 </html>

@@ -22,7 +22,7 @@
 
   // Fetch list of artikelDesa, ordered by tanggalUpload desc
   async function fetchArticles() {
-    const url = `${BASE}/entries?access_token=${TOKEN}&content_type=artikelDesa&order=-fields.tanggalUpload`;
+    const url = `${BASE}/entries?access_token=${TOKEN}&content_type=artikel-desa&order=-fields.tanggalUpload`;
     const res = await fetch(url);
     if (!res.ok) throw new Error('Gagal fetch artikel: ' + res.status);
     return res.json();
