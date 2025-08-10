@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <title>Artikel — Desa Lanjan</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    .article-detail .hero img { width:100%; max-height:420px; object-fit:cover; border-radius:10px; }
+    .article-detail h1 { color:#6F4E37; margin-top:18px; }
+    .meta { color:#777; margin-bottom:18px; }
+    .content p { line-height:1.7; margin-bottom:16px; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div id="article-container">Memuat artikel...</div>
+  </main>
+
+  <!-- KONFIGURASI CONTENTFUL -->
+  <script>
+    window.CONTENTFUL_SPACE_ID = "fejitalayxrw";
+    window.CONTENTFUL_DELIVERY_TOKEN = "3HHTehDFYLA079AtICueEv0UtN3vV1m0ImLx4LnY3_0"; 
+    window.CONTENTFUL_ENVIRONMENT = "master"; 
+    
+    function getQueryParam(name) {
+      const params = new URLSearchParams(location.search);
+      return params.get(name);
+    }
+  </script>
+
+  <!-- SCRIPT UTAMA -->
+  <script src="assets/js/contentful.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const id = getQueryParam('id');
+      const container = document.getElementById('article-container');
+
+      if (!id) {
+        container.innerHTML = '<p>Artikel tidak ditemukan (id kosong).</p>';
+        return;
+      }
+
+      if (typeof renderArticleDetail === 'function') {
+        renderArticleDetail('article-container', id);
+      } else {
+        container.innerHTML = '<p>Script belum siap.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

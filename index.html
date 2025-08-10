@@ -765,9 +765,6 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <script>
-    renderArticleList("artikel-container");
-  </script>
   
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -796,6 +793,11 @@
         console.error('renderArticleList tidak ditemukan');
       }
     });
+    </script>
+    <script>
+        window.onload = () => {
+        renderArticleList('artikel-container');
+      };
     </script>
 </body>
 
