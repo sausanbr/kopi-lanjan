@@ -28,16 +28,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <style>
-    /* ringkasan gaya supaya cepat tampil */
-    .artikel-grid { display:flex; flex-wrap:wrap; gap:18px; }
-    .artikel-card { background:#fff; border-radius:10px; overflow:hidden; box-shadow:0 6px 18px rgba(0,0,0,0.06); width: calc(33.333% - 12px); min-width:260px; display:flex; flex-direction:column; text-decoration:none; color:inherit;}
-    .artikel-thumb img{ width:100%; height:200px; object-fit:cover; display:block;}
-    .artikel-body{ padding:14px; }
-    .meta{ color:#777; font-size:13px; margin-bottom:8px;}
-    @media (max-width:900px){ .artikel-card{ width: calc(50% - 12px);} }
-    @media (max-width:600px){ .artikel-card{ width:100%; } .artikel-thumb img{ height:160px } }
-  </style>
 
 </head>
 
@@ -100,20 +90,6 @@
                 <a href="#testimonials" class="btn btn-primary">Cerita Unik Kami</a>
                 <a href="#services" class="btn btn-outline">Lihat Produk</a>
               </div>
-              <!-- <div class="hero-stats">
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>+</h3>
-                  <p>Years Experience</p>
-                </div>
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="1" class="purecounter"></span>+</h3>
-                  <p>Clients Worldwide</p>
-                </div>
-                <div class="stat-item">
-                  <h3><span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>%</h3>
-                  <p>Success Rate</p>
-                </div>
-              </div> -->
             </div>
           </div>
           <div class="col-lg-6">
@@ -173,48 +149,6 @@
               <p style="text-align: justify;">Desa Lanjan terletak di dataran tinggi Kecamatan Sumowono, berada pada ketinggian sekitar 900 hingga 1.100 meter di atas permukaan laut. Suhu udara di sini sejuk sepanjang tahun, berkisar antara 20–26°C. Keindahan alamnya ditandai oleh hamparan kebun kopi, hutan pinus, serta aliran mata air yang tak pernah kering.</p>
               <p class="lead">Komoditas utama Desa lanjan adalah kopi.</p>
               <p style="text-align: justify;">Warga Desa Lanjan sebagian besar bekerja sebagai petani dan peternak. Komoditas utama desa ini adalah kopi arabika dan robusta, yang ditanam di lahan-lahan miring dengan teknik sederhana namun berkelanjutan. Selain kopi, sayur-mayur seperti sawi, kol, cabai, dan tomat juga menjadi andalan dalam sektor pertanian hortikultura. </p>
-
-             <!--  <div class="row features-row">
-                <div class="col-md-6">
-                  <div class="feature-item">
-                    <div class="icon">
-                      <i class="bi bi-graph-up-arrow"></i>
-                    </div>
-                    <h4>Business Growth</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="feature-item">
-                    <div class="icon">
-                      <i class="bi bi-lightbulb"></i>
-                    </div>
-                    <h4>Innovative Solutions</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="feature-item">
-                    <div class="icon">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <h4>Expert Team</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="feature-item">
-                    <div class="icon">
-                      <i class="bi bi-trophy"></i>
-                    </div>
-                    <h4>Proven Results</h4>
-                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                  </div>
-                </div> 
-              </div> -->
 
             </div>
           </div>
@@ -509,7 +443,7 @@
     <section id="testimonials" class="testimonials section light-background">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Kisah Petani</h2>
         <div><span>Kisah Unik</span> <span class="description-title">Petani Desa Lanjan</span></div>
       </div><!-- End Section Title -->
@@ -670,14 +604,14 @@
   <!-- Testimonials Section -->
 
         <!-- Blog Section -->
-    <section id="pricing" class="pricing section light-background">
+    <section id="pricing" class="pricing section">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
+      <div class="container section-title">
         <h2>Blog</h2>
         <div><span>Artikel</span> <span class="description-title">Seputar Kopi</span></div>
       </div><!-- End Section Title -->
 
-      <div class="row gy-4 px-5">
+      <div class="row gy-4 px-5" data-aos="fade-up">
         <!-- Artikel 1 -->
         <div class="col-lg-3 col-md-7">
           <div class="pricing-item d-flex flex-column justify-content-between shadow-sm rounded">
@@ -746,8 +680,17 @@
     </section>
     <!-- Blog Section End -->
 
-    <h1>Kisah & Artikel — Desa Lanjan</h1>
-    <div id="artikel-container"></div>
+    <section id="pricing" class="pricing section light-background">
+      <!-- Section Title -->
+      <div class="container section-title">
+        <h2>Berita</h2>
+        <div><span>Berita</span> <span class="description-title">Desa Lanjan</span></div>
+      </div>
+      <!-- End Section Title -->
+
+      <div class="row gy-4 px-5">
+        <div id="artikel-container"></div>
+        </div>
   </main>
 
   
