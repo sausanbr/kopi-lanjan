@@ -747,9 +747,12 @@
     <!-- Blog Section End -->
 
     <h1>Kisah & Artikel — Desa Lanjan</h1>
-    <div id="artikel-list"></div>
-
+    <div id="artikel-container"></div>
   </main>
+
+<script>
+  renderArticleList("artikel-container");
+</script>
 
   <footer id="footer" class="footer light-background">
 
@@ -777,12 +780,8 @@
 
   <!-- inject env vars (Netlify can replace via build) -->
   <script>
-    // Netlify will not automatically inject process.env into client JS.
-    // We'll get env from global window variables that Netlify can write during build.
-    // If you deploy on Netlify, set these site env vars and add a small build plugin to inject them,
-    // or simply copy token/value manually into these window vars for testing (avoid committing tokens).
-    window.CONTENTFUL_SPACE_ID = '{{CONTENTFUL_SPACE_ID}}';
-    window.CONTENTFUL_DELIVERY_TOKEN = '{{CONTENTFUL_DELIVERY_TOKEN}}';
+    window.CONTENTFUL_SPACE_ID = "fejitalayxrw";
+    window.CONTENTFUL_DELIVERY_TOKEN = "3HHTehDFYLA079AtICueEv0UtN3vV1m0ImLx4LnY3_0";
     window.CONTENTFUL_ENVIRONMENT = '{{CONTENTFUL_ENVIRONMENT}}' || 'master';
   </script>
 
@@ -791,7 +790,7 @@
     // after loading contentful.js, call render
     document.addEventListener('DOMContentLoaded', function(){
       if (typeof renderArticleList === 'function') {
-        renderArticleList('artikel-list');
+        renderArticleList('artikel-container');
       } else {
         console.error('renderArticleList tidak ditemukan');
       }
