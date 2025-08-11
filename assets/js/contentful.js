@@ -185,11 +185,19 @@ window.renderArticleDetail = async function (containerId, entryId) {
         </div>
       </div>
     </section>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container copyright" style="text-align:center;">
+        <h4>© Website ini dibuat oleh Tim KKN-T 135 Universitas Diponegoro Tahun 2025 🤎</h4>
+      </div>
+    </footer>
     `;
 
     if (typeof initNavMenu === "function") {
       initNavMenu();
     }
+
+    document.querySelector('#footer .copyright').classList.add('text-center');
     
   } catch (err) {
     console.error(err);
